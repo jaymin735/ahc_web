@@ -1,0 +1,12 @@
+{
+  "name": "angelwing-hospitality-compass",
+  "version": "1.0.0",
+  "description": "Static website for Angelwing Hospitality Compass",
+  "scripts": {
+    "build": "echo 'Build completed successfully - static files ready for deployment'",
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
