@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANGELWING HOSPITALITY COMPASS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            scroll-behavior: smooth;
+        }
+
+        .body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #000000;
+            scroll-behavior: smooth;
+        }
+
+        .heading-font {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 0.5px;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        section h2 {
+            letter-spacing: 1px;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(123, 123, 123, 0.7) 0%, rgba(0,0,0,0.3) 100%);
+        }
+        
+        .dish-card:hover .dish-overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .dish-overlay {
+            transition: all 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .timeline-item:not(:last-child):after {
+            content: '';
+            position: absolute;
+            left: 24px;
+            top: 32px;
+            height: calc(100% - 32px);
+            width: 2px;
+            background: #e2e8f0;
+        }
+        
+        .testimonial-card {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .menu-item {
+            border-bottom: 1px solid #e5e5e5;
+            padding-bottom: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .menu-item h4 {
+            color: #1a1a1a;
+            font-size: 1.1rem;
+        }
+
+        .menu-item p {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .skill-bar {
+            background-color: #e8e8e8;
+            height: 8px;
+            border-radius: 4px;
+        }
+        
+        .skill-progress {
+            background: linear-gradient(90deg, #2563eb, #3b82f6);
+            height: 100%;
+            border-radius: 4px;
+            transition: width 1s ease;
+        }
+
+        .bg-white {
+            background-color: #ffffff;
+        }
+
+        .rounded-lg {
+            border-radius: 12px;
+        }
+
+        .shadow-md {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .shadow-lg {
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        ul li {
+            transition: all 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(5px);
+        }
+        /* Responsive sizing tweaks for tablet and mobile */
+        @media (max-width: 1024px) {
+            header h1 { font-size: 2.5rem !important; }
+            header p { font-size: 1.125rem !important; }
+            section h2 { font-size: 1.75rem !important; }
+            .text-5xl { font-size: 2rem !important; }
+            .text-4xl { font-size: 1.75rem !important; }
+            .text-3xl { font-size: 1.4rem !important; }
+            .container { padding-left: 1rem !important; padding-right: 1rem !important; }
+            .w-24 { width: 5.5rem !important; }
+            .w-50 { width: 12rem !important; height: 12rem !important; }
+            header { height: 75vh; }
+        }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.75rem !important; }
+            header p { font-size: 1rem !important; }
+            section h2 { font-size: 1.25rem !important; }
+            .text-5xl { font-size: 1.5rem !important; }
+            .text-4xl { font-size: 1.25rem !important; }
+            .text-3xl { font-size: 1.1rem !important; }
+            .container { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+            .py-20 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+            .w-50 { width: 9.5rem !important; height: 9.5rem !important; }
+            .testimonial-card p { font-size: 0.95rem !important; }
+        }
+        </style>
+
+</head>
+<body class="bg-blue-900 text-black">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <a href="#home" class="flex items-center">
+                    <img src="IMG_20280809_103614_397.png" alt="Angelwing Hospitality Compass" class="h-10 w-auto object-contain">
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex space-x-6 items-center">
+                    <a href="#about us" class="hover:text-blue-600 transition text-sm font-medium">ABOUT US</a>
+                    <a href="#AHC team" class="hover:text-blue-600 transition text-sm font-medium">AHC TEAM</a>
+                    <a href="#our expertise" class="hover:text-blue-600 transition text-sm font-medium">OUR EXPERTISE</a>
+                    <a href="#our services" class="hover:text-blue-600 transition text-sm font-medium">OUR SERVICES</a>
+                    <a href="#opportunities" class="hover:text-blue-600 transition text-sm font-medium">OPPORTUNITIES</a>
+                    <a href="#gallery" class="hover:text-blue-600 transition text-sm font-medium">GALLERIA</a>
+                    <a href="#testimonials" class="hover:text-blue-600 transition text-sm font-medium">CLIENT'S TESTIMONIALS</a>
+                    <a href="#contact" class="hover:text-blue-600 transition text-sm font-medium">CONTACT</a>
+                </div>
+
+                <!-- Tablet Navigation -->
+                <div class="hidden md:flex lg:hidden space-x-4 items-center">
+                    <a href="#about us" class="hover:text-blue-600 transition text-xs font-medium">ABOUT US</a>
+                    <a href="#AHC team" class="hover:text-blue-600 transition text-xs font-medium">AHC TEAM</a>
+                    <a href="#our expertise" class="hover:text-blue-600 transition text-xs font-medium">OUR EXPERTISE</a>
+                    <a href="#our services" class="hover:text-blue-600 transition text-xs font-medium">OUR SERVICES</a>
+                    <a href="#opportunities" class="hover:text-blue-600 transition text-xs font-medium">OPPORTUNITIES</a>
+                    <a href="#gallery" class="hover:text-blue-600 transition text-xs font-medium">GALLERIA</a>
+                    <a href="#testimonials" class="hover:text-blue-600 transition text-xs font-medium">CLIENT'S TESTIMONIALS</a>
+                    <a href="#contact" class="hover:text-blue-600 transition text-xs font-medium">CONTACT</a>
+                </div>
+
+                <!-- Mobile/Tablet Menu Button -->
+                <div class="md:hidden lg:hidden">
+                    <button id="mobile-menu-button" class="outline-none p-2">
+                        <i class="fas fa-bars text-2xl text-blue-500 hover:text-black transition"></i>
+                    </button>
+                </div>
+
+                <!-- Tablet Menu Button -->
+                <div class="hidden md:flex lg:hidden">
+                    <button id="tablet-menu-button" class="outline-none p-2">
+                        <i class="fas fa-bars text-xl text-blue-500 hover:text-black transition"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden bg-white pb-4 px-4 shadow-lg border-t">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#about us" class="hover:text-blue-600 transition py-2">ABOUT US</a>
+                    <a href="#AHC team" class="hover:text-blue-600 transition py-2">AHC TEAM</a>
+                    <a href="#our expertise" class="hover:text-blue-600 transition py-2">OUR EXPERTISE</a>
+                    <a href="#our services" class="hover:text-blue-600 transition py-2">OUR SERVICES</a>
+                    <a href="#opportunities" class="hover:text-blue-600 transition py-2">OPPORTUNITIES</a>
+                    <a href="#gallery" class="hover:text-blue-600 transition py-2">GALLERIA</a>
+                    <a href="#testimonials" class="hover:text-blue-600 transition py-2">CLIENT'S TESTIMONIALS</a>
+                    <a href="#contact" class="hover:text-blue-600 transition py-2">CONTACT US</a>
+                </div>
+            </div>
+
+            <!-- Tablet Menu -->
+            <div id="tablet-menu" class="hidden bg-white pb-4 px-4 shadow-lg border-t">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#about us" class="hover:text-blue-600 transition py-2">ABOUT US</a>
+                    <a href="#AHC team" class="hover:text-blue-600 transition py-2">AHC TEAM</a>
+                    <a href="#our expertise" class="hover:text-blue-600 transition py-2">OUR EXPERTISE</a>
+                    <a href="#our services" class="hover:text-blue-600 transition py-2">OUR SERVICES</a>
+                    <a href="#opportunities" class="hover:text-blue-600 transition py-2">OPPORTUNITIES</a>
+                    <a href="#gallery" class="hover:text-blue-600 transition py-2">GALLERIA</a>
+                    <a href="#testimonials" class="hover:text-blue-600 transition py-2">CLIENT'S TESTIMONIALS</a>
+                    <a href="#contact" class="hover:text-blue-600 transition py-2">CONTACT US</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('IMG_167583908.png');">
+        <!-- gradient overlay -->
+        <div class="absolute inset-0 hero-gradient"></div>
+
+        <!-- content -->
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6 heading-font">ANGELWING HOSPITALITY COMPASS</h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">"Elevating Hospitality Excellence"</p>
+        </div>
+
+        <!-- scroll indicator -->
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about us" class="text-blue-500 animate-bounce inline-block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about us" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">ABOUT US</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 md:pr-10">
+                    <div class="relative">
+                        <img src="IMG_167583908.png" alt="Angelwing Hospitality Compass" class="rounded-lg shadow-xl w-full">
+                    </div>
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-2xl font-bold mb-4 heading-font">Angelwing Hospitality Compass (AHC)</h3>
+                    <p class="text-black mb-6 leading-relaxed">
+                      was founded on the principle that exceptional hospitality is both an art and a science. Our team of industry veterans brings together decades of experience in upscale restaurants, luxury hotels, and innovative F&B concepts worldwide. The food and beverage concept's development background, coupled with upmarket gourmet restaurant food service and hospitality industry management expertise. We specialize in transforming food & beverage concepts into unforgettable experiences through innovative consulting and management solutions.
+                    </p>
+                    <p class="text-black mb-6 leading-relaxed">
+                      <b>Angelwing Hospitality Compass (AHC)</b> is a global hospitality consulting firm founded in 2010, specializing in innovative food & beverage concepts, silver spoon and free standing makeover, restaurant management, and operational excellence. We are certainly obsessed with being the difference while we remain different at all times. We are also fond of Crafting Exceptional Hospitality Experiences whilst Elevating Hospitality Excellence.
+                    </p>
+                </div>
+            </div>
+        </section>
+                        
+                        
+    <!-- AHC Team Section -->
+    <section id="AHC team" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 heading-font text-gray-900">AHC TEAM</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto">Our dedicated team of hospitality experts ready to elevate your vision</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+                <!-- Team Member 1 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG_1689078398.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Hospitality & Restaurant Operations</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Joeharudin I. Nordin @ Chef Johar</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">General Manager of Operations (AHC)</p>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG_1638095817.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Finance</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Joshua Kim</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Chief Financial Officer (AHC)</p>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG_7624916b8.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Corporate Office</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Adnan Kim Jun @ Daniel Kim Jun</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Chairman / Owner (AHC)</p>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG_167180735.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Head Office</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Meymunah Amin Yusof</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Chief Executive Officer (AHC)</p>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG_169317508.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">HR & Personnel Office</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Kamsiah JeffreyTan</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Senior Human Resources Manager (AHC)</p>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG_1638713959.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Design and Ambiance</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Susanah Anne Miller</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Design and Ambiance Director (AHC)</p>
+                </div>
+
+                <!-- Team Member 7 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG-158917093.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Sales and Marketing</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Fazelah Ali Tyson</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Director of Sales & Marketing (AHC)</p>
+                </div>
+
+                <!-- Team Member 8 -->
+                <div class="text-center group">
+                    <div class="mb-6 flex justify-center overflow-hidden rounded-full sm:rounded-xl md:rounded-lg lg:rounded-md lg:shadow-lg lg:hover:shadow-xl transition-all duration-300">
+                        <img src="IMG-1877379308.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Beverage Operations</h3>
+                    <p class="text-black font-bold mb-3 text-lg">Anna Petrova</p>
+                    <p class="text-gray-700 text-sm leading-relaxed">Wine Sommelier & Beverage Manager (AHC)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Section -->
+    <section id="our expertise" class="py-20 bg-white">
+
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">OUR EXPERTISE</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+            </div>
+        </div>
+
+        <div>
+            <div class="md:w-2/3 mx-auto">
+            <p class="text-black mb-6 leading-relaxed"><b>Angelwing Hospitality Compass (AHC)</b> is a seasoned hospitality group that has been specialized in Hospitality Consulting and Food and Beverage Services Management. We also provide comprehensive solutions tailored to elevate your food & beverage operations to world-class standards.</p> 
+            <p class="text-black mb-6 leading-relaxed">The details of comprehensive solutions are as per below:</p>
+            </div>
+            <div class="max-w-3xl mx-auto">
+                <div class="space-y-8">
+
+                    <!-- Expertise Item -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-lightbulb text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Concept Development</li> </h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                From idealization to execution, we craft unique F&B concepts that resonate with your target audience and market positioning.
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Expertise Item 2 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-magnifying-glass text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Market research & feasibility studies</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Brand identity & positioning.
+                            </ul>
+                            <ul>
+                                Menu engineering & development.
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Expertise Item 3 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-star text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Operational Excellence</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                We optimize your restaurant operations to maximize efficiency, profitability, and guest satisfaction.
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Expertise Item 4 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-person-chalkboard text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>SOP development & implementation</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Cost control & revenue management.
+                            </ul>
+                            <ul>
+                                Staff training & development.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 5 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-layer-group text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Design & Ambiance</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Creating immersive dining environments that tell your brand story and enhance the guest experience.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 6 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-paint-brush text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Interior design & space planning</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Lighting & acoustics optimization.
+                            </ul>
+                            <ul>
+                                Tabletop & uniform design.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 7 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-flask text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Culinary Innovation</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Our culinary experts develop menus that balance creativity, profitability, and operational feasibility.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 8 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-sitemap text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Recipe development & standardization</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Seasonal menu rotations.
+                            </ul>
+                            <ul>
+                                Chef training & kitchen workflow.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 9 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-mug-saucer text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Beverage Programs</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Crafting beverage programs that complement your food offerings and drive profitability.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 10 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-martini-glass-citrus text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Wine list curation & pairing</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Craft cocktail development.
+                            </ul>
+                            <ul> 
+                                Bar Design & workflow optimization.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 11 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-microchip text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>Technology Integration</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                                Implementing cutting-edge technology solutions to streamline operations and enhance guest experiences.
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Expertise Item 12 -->
+                    <div class="timeline-item relative pl-16">
+                        <div class="absolute left-0 top-0 bg-blue-500 text-white rounded-full w-12 h-12 flex items-center justify-center">
+                            <i class="fas fa-gears text-xl"></i>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h3 class="text-blue-800 font-bold mb-1"><li>POS system selection & implementation</li></h3>
+                                </div>
+                            </div>
+                            <ul class="mt-3 list-disc list-inside text-gray-900 space-y-1">
+                               Reservation & table management.
+                            </ul>
+                            <ul>
+                               Digital marketing & loyalty programs.
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="our services" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 heading-font text-gray-900">OUR SERVICES</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-900 max-w-2xl mx-auto leading-relaxed">We understand that successful hospitality ventures require a perfect balance of creative vision and operational precision.</p>
+            </div>
+            
+            <!-- Services Section -->
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-10 rounded-xl shadow-md border border-blue-100">
+                        <h3 class="text-2xl font-bold mb-8 heading-font text-black">Explore Our Services:</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-lightbulb text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Concept Development</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">From idealization to execution, we craft unique F&B concepts that resonate with your target audience and market positioning.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-magnifying-glass text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Operational Excellence</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">We optimize your restaurant operations to maximize efficiency, profitability, and guest satisfaction.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-layer-group text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Design & Ambiance</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Creating immersive dining environments that tell your brand story and enhance the guest experience.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-flask text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Culinary Innovation</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Our culinary experts develop menus that balance creativity, profitability, and operational feasibility.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-mug-saucer text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Beverage Programs</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Crafting beverage programs that complement your food offerings and drive profitability.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gradient-to-br from-blue-50 to-white p-10 rounded-xl shadow-md border border-blue-100">
+                        <h3 class="text-2xl font-bold mb-8 heading-font text-black">Why Choose Us?</h3>
+                        <ul class="space-y-6">
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-award text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Award-Winning Expertise</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Recognized by industry leaders for innovation and excellence.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-globe text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Global Perspective</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Insights from working across diverse markets and cultures, including high-end halal restaurants.</p>
+                                </div>
+                            </li>
+                            
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-handshake text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Client-Centric Approach</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Tailored solutions that align with your vision and goals.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-chart-line text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Data-Driven Strategies</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Combining creativity with analytics for measurable results.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-star text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Signature Projects</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">Explore some of our most innovative and successful hospitality projects from around the world.</p>
+                                </div>
+                            </li>
+
+                            <li class="flex items-start group cursor-pointer">
+                                <i class="fas fa-calendar text-blue-500 mr-4 mt-1 text-xl flex-shrink-0 group-hover:scale-110 transition-transform"></i>
+                                <div>
+                                    <span class="text-blue-700 font-bold block text-lg">Schedule Consultation</span>
+                                    <p class="text-gray-900 text-sm mt-1 leading-relaxed">~ Mon-Fri, 9:00am - 6:00pm</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Opportunities Section -->
+    <section id="opportunities" class="py-20 bg-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">OPPORTUNITIES</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+            </div>
+        
+            
+            <div class="space-y-3">
+                <p class="text-lg text-gray-900 max-w-3xl mx-auto font-bold">COMMERCIAL OPPORTUNITIES</p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  The <b>Angelwing Hospitality Compass (AHC)</b>  provides consultancy services to businesses within the hospitality sector, as well as providing services to upmarket contract caterers and private dining and corporate hospitality events. We also project manage and run new restaurants in association with hoteliers and entrepreneurs.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  Our companies are not clones of one another. Each one has its own identity and characteristics. There's no set template. We work with interior designers and architects restaurant by restaurant, bar by bar. There's no single ownership structure. Sometimes, we set up in partnership with hoteliers and other businesses, sometimes on our own.
+                </p>
+            </div>
+
+            <div class="space-y-3 mt-10">
+
+                <p class="text-lg text-gray-900 max-w-3xl mx-auto font-bold">COMMERCIAL PARTNERSHIPS</p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                  The model is a joint-venture project; there's a synergy between us and our partners and a shared commitment to creating something great - with its own unique identity, recognizable by its values rather than its corporate brand. When we help a hotelier or other business open a venue, we 'second' a team of key personnel to the project. Importantly, our General of Operations cum Executive Chef Consultant takes a direct role in quality control - we're in the project for the long haul. For commercial project enquiries, please <a href="#contact" class="text-blue-500 hover:text-blue-700">contact us</a>.
+                </p>
+            </div>
+
+            <div class="space-y-3 mt-10">
+
+                <p class="text-lg text-gray-900 max-w-3xl mx-auto font-bold">BRAND PARTNERSHIPS</p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                   We are the brand ambassador for a number of brands, and other several top world class brands, and are always open to discussing new partnerships. For brand partnership inquiries, please <a href="#contact" class="text-blue-500 hover:text-blue-700">contact us</a>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 heading-font text-black">GALLERIA</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-900 max-w-2xl mx-auto">Explore our culinary creations and signature projects</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Photo 1 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_10701918.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                
+                <!-- Photo 2 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_165917380.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                
+                <!-- Photo 3 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_1183157903.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                
+                <!-- Photo 4 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_108939578.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                
+                <!-- Photo 5 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_1605373819.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+                
+                <!-- Photo 6 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_158370918.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+
+                <!-- Photo 7 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_1673819570.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+
+                <!-- Photo 8 -->
+                <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img src="IMG_1697198350.jpg" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-300">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 heading-font text-gray-900">CLIENT TESTIMONIALS</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mb-6"></div>
+                <p class="text-lg text-gray-900 max-w-2xl mx-auto">What Our Clients Say:</p>
+                <p class="text-gray-700 mt-4 max-w-2xl mx-auto leading-relaxed">Don't just take our word for it - hear from hospitality leaders who have partnered with us.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-lg">★★★★★</div>
+                    </div>
+                    <p class="text-gray-800 italic mb-6 leading-relaxed">"<b>Angelwing Hospitality Compass (AHC)</b> transformed our struggling bistro into a Michelin-recommended establishment through Michelin Guide Program within 12 months. Their operational expertise and menu engineering increased our profitability by 40%."</p>
+                    <div class="flex items-center pt-4 border-t border-blue-100">
+                        <img src="IMG_16593178.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Sarah Johnson</h4>
+                            <p class="text-gray-700 text-sm">Owner, Le Petit Bistro</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-lg">★★★★★</div>
+                    </div>
+                    <p class="text-gray-800 italic mb-6 leading-relaxed">"Their beverage program development for our hotel group resulted in a 75% increase in bar revenue. The training they provided to our staff was exceptional and continues to pay dividends."</p>
+                    <div class="flex items-center pt-4 border-t border-blue-100">
+                        <img src="IMG_168057319.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Mikael Jordan</h4>
+                            <p class="text-gray-700 text-sm">F&B Director, Grand Horizon Hotels</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-lg">★★★★★</div>
+                    </div>
+                    <p class="text-gray-800 italic mb-6 leading-relaxed">"From concept to opening, <b>Angelwing Hospitality Compass (AHC)</b> guided us through every step of creating our flagship restaurant. Their attention to detail and market insights were invaluable in making us an instant success."</p>
+                    <div class="flex items-center pt-4 border-t border-blue-100">
+                        <img src="IMG_1670938175.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Elena Rodriguez</h4>
+                            <p class="text-gray-700 text-sm">CEO, Gastronomy Ventures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card bg-gradient-to-br from-blue-50 to-white p-8 rounded-xl shadow-md border border-blue-100 hover:shadow-lg transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-amber-500 text-lg">★★★★★</div>
+                    </div>
+                    <p class="text-gray-800 italic mb-6 leading-relaxed">"<b>Angelwing Hospitality Compass (AHC)</b> has been supporting me in the success of our first multi-concept food and beverage outlets including halal restaurant ever-since last ten years now."</p>
+                    <div class="flex items-center pt-4 border-t border-blue-100">
+                        <img src="IMG_16095738.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4 object-cover">
+                        <div>
+                            <h4 class="font-bold text-blue-700">Redzuan Hasyim</h4>
+                            <p class="text-gray-700 text-sm">Co-Owner, Soi Noodle Bar, Rezo Cafe & Bistari Restaurant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 heading-font">Let's Get Started Today!</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto"></div>
+                <p class="mt-4 max-w-2xl mx-auto text-gray-900">Ready to Elevate Your Hospitality Business? Whether you're launching a new concept or optimizing an existing operation, our team is ready to help you achieve exceptional results.</p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6 heading-font">Contact Us</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-white p-4 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Email Us:</h4>
+                                    <a href="mailto:contact@ahc.com" class="text-gray-900">contact@ahc.com</a>
+                                    <p><a href="mailto:contact.ahc@yahoo.com" class="text-gray-900">contact.ahc@yahoo.com</a></p>
+                                    <a href="mailto:consulting@angelwinghospitalitycompass.com" class="text-gray-900">consulting@angelwinghospitalitycompass.com </a>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Call Us:</h4>
+                                    <a href="tel:+1 (800) 555-1378" class="text-gray-900">+1 (800) 555-1378</a>
+                                    <p><a href="tel:+60-017-6979752" class="text-gray-900">+(60) 17-6979752</a></p>
+                                    <p class="text-gray-600">Mon-Fri, 9am-6pm</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-white p-2 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                                </div>
+                                <div class="flex flex-col space-y-6">
+                                    <div>
+                                        <h4 class="font-bold">Headquarters</h4>
+                                        <p class="text-gray-900 mb-1">ANGELWING HOSPITALITY COMPASS</p>
+                                        <p class="text-gray-600 mb-1">123 Gourmet Avenue</p>
+                                        <p class="text-gray-600 mb-1">Suite 500</p>
+                                        <p class="text-gray-600 mb-1">New York, NY 10001</p>
+                                        <p class="text-gray-600">USA</p>
+                                    </div>
+
+                                    <div>
+                                        <h4 class="font-bold">Malaysia Branch</h4>
+                                        <p class="text-gray-900 mb-1">No. 313, 13rd Floor, Angelwing House</p>
+                                        <p class="text-gray-600 mb-1">Bangsar South</p>
+                                        <p class="text-gray-600">WP. Kuala Lumpur 59200, Malaysia</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">FOLLOW US</h4>
+                            <p class="text-gray-900 mb-4">Let's Get In Touch!</p>
+                            <div class="flex space-x-4">
+                                <a href="https://www.instagram.com/ahc_consult?igsh=d2xkcHV0bW5xNHF4" target="_blank" class="bg-gray-100 hover:bg-blue-400 bluetext-gray-800 p-3 rounded-full transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.facebook.com/angelwinghospitalitygroup" target="_blank" class="bg-gray-100 hover:bg-blue-400 text-gray-800 p-3 rounded-full transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   <div>
+                        <form action="https://api.web3forms.com/submit" method="POST" class="contact">
+                           <h4 class="font-bold mb-4">Let's Create Something Exceptional Together!</h4>
+                          
+                            <div>
+                                <input type="hidden" name="access_key" value="af6e8262-58c9-454f-8056-78bd5142f837">
+                                
+                                <label for="name" class="block font-medium mb-2">Full Name</label>
+                                <input type="text" name="name" placeholder="Your Name" required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+
+                                <label for="email" class="block font-medium mb-2">Email Address</label>
+                                <input type="email" name="email" placeholder="Your Email" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+
+                                <label for="subject" class="block font-medium mb-2">Subject</label>
+                                <input type="text" name="subject" placeholder="Subject" required
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800">
+
+                                <label for="message" class="block font-medium mb-2">Message</label>
+                                <textarea name="message" rows="4" placeholder="Complete the form to schedule a consultation with our hospitality experts. We'll respond within 24 hours to discuss how we can help bring your vision to life." required 
+                                class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 text-gray-800"></textarea>
+
+                               <button type="submit" class="w-full bg-blue-600 hover:bg-black text-white px-6 py-3 rounded-full font-medium transition">Submit</button>
+                               </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-black py-12 border-t border-gray-300">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between space-y-6 md:space-y-0">
+                <div class="flex items-center space-x-4">
+                    <img src="IMG_20280809_103614_397.png" alt="Angelwing logo" class="h-9 w-auto object-contain">
+                    <div>
+                        <div class="text-2xl font-bold heading-font text-blue-500">Angelwing Hospitality Compass</div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center md:justify-end gap-4">
+                    <a href="#company" class="hover:text-blue-400 transition">Company</a>
+                    <a href="#about us" class="hover:text-blue-400 transition">About Us</a>
+                    <a href="#gallery" class="hover:text-blue-400 transition">Portfolio</a>
+                    <a href="#testimonials" class="hover:text-blue-400 transition">Testimonials</a>
+                    <a href="#contact" class="hover:text-blue-400 transition">Careers</a>
+                    <a href="#blog" class="hover:text-blue-400 transition">Blog</a>
+                </div>
+            </div>
+
+            <div class="mt-6 border-t border-gray-300 pt-6 flex flex-col md:flex-row md:justify-between md:items-center text-sm text-gray-600">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="mr-4">Privacy Policy</a>
+                    <a href="#" class="mr-4">Terms of Service</a>
+                    <a href="#" class="mr-4">Cookie Policy</a>
+                    <a href="#" class="mr-4">Sitemap</a>
+                </div>
+                <div>
+                    <!-- reserved for future links or small notes -->
+                </div>
+                © 2006 Angelwing Hospitality Compass. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                const menu = document.getElementById('mobile-menu');
+                menu.classList.toggle('hidden');
+            });
+        }
+
+        // Tablet menu toggle
+        const tabletMenuButton = document.getElementById('tablet-menu-button');
+        if (tabletMenuButton) {
+            tabletMenuButton.addEventListener('click', function() {
+                const menu = document.getElementById('tablet-menu');
+                menu.classList.toggle('hidden');
+            });
+        }
+
+        // Close menus when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const tabletMenu = document.getElementById('tablet-menu');
+            const mobileButton = document.getElementById('mobile-menu-button');
+            const tabletButton = document.getElementById('tablet-menu-button');
+
+            if (mobileMenu && !mobileMenu.contains(event.target) && !mobileButton.contains(event.target)) {
+                mobileMenu.classList.add('hidden');
+            }
+
+            if (tabletMenu && !tabletMenu.contains(event.target) && !tabletButton.contains(event.target)) {
+                tabletMenu.classList.add('hidden');
+            }
+        });
+
+        // Animate skill bars on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+
+            const animateSkillBars = () => {
+                skillBars.forEach(bar => {
+                    const width = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 100);
+                });
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateSkillBars();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const skillsSection = document.getElementById('skills');
+            if (skillsSection) {
+                observer.observe(skillsSection);
+            }
+        });
+    </script>
+</body>
+</html>
