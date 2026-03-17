@@ -132,6 +132,32 @@
         ul li:hover {
             transform: translateX(5px);
         }
+        /* Responsive sizing tweaks for tablet and mobile */
+        @media (max-width: 1024px) {
+            header h1 { font-size: 2.5rem !important; }
+            header p { font-size: 1.125rem !important; }
+            section h2 { font-size: 1.75rem !important; }
+            .text-5xl { font-size: 2rem !important; }
+            .text-4xl { font-size: 1.75rem !important; }
+            .text-3xl { font-size: 1.4rem !important; }
+            .container { padding-left: 1rem !important; padding-right: 1rem !important; }
+            .w-24 { width: 5.5rem !important; }
+            .w-50 { width: 12rem !important; height: 12rem !important; }
+            header { height: 75vh; }
+        }
+
+        @media (max-width: 640px) {
+            header h1 { font-size: 1.75rem !important; }
+            header p { font-size: 1rem !important; }
+            section h2 { font-size: 1.25rem !important; }
+            .text-5xl { font-size: 1.5rem !important; }
+            .text-4xl { font-size: 1.25rem !important; }
+            .text-3xl { font-size: 1.1rem !important; }
+            .container { padding-left: 0.75rem !important; padding-right: 0.75rem !important; }
+            .py-20 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
+            .w-50 { width: 9.5rem !important; height: 9.5rem !important; }
+            .testimonial-card p { font-size: 0.95rem !important; }
+        }
         </style>
 
 </head>
@@ -285,7 +311,7 @@
                         <img src="IMG_7624916b8.jpg" alt="Team Member" class="w-50 h-50 object-cover block group-hover:scale-105 transition-transform duration-300">
                     </div>
                     <h3 class="text-2xl font-bold text-blue-500 mb-2 heading-font">Corporate Office</h3>
-                    <p class="text-black font-bold mb-3 text-lg">Adnan Kim Jun @ Daniel Kim Jun</p>
+                    <p class="text-black font-bold mb-3 text-lg">Daniel Kim Jun</p>
                     <p class="text-gray-700 text-sm leading-relaxed">Chairman / Owner (AHC)</p>
                 </div>
 
@@ -887,7 +913,7 @@
                                     <h4 class="font-bold">Email Us:</h4>
                                     <a href="mailto:contact@ahc.com" class="text-gray-900">contact@ahc.com</a>
                                     <p><a href="mailto:contact.ahc@yahoo.com" class="text-gray-900">contact.ahc@yahoo.com</a></p>
-                                    <a href="mailto:consulting@angelwinghospitalitycompass.com" class="text-gray-900">consulting@angelwinghospitalitycompass.com </a>
+                                    <a href="mailto:consulting@angelwinghospitalitycompass.com" class="text-gray-900">consulting@ahc.com </a>
                                 </div>
                             </div>
                             
